@@ -25,7 +25,14 @@ A simple weather application built using HTML, CSS, and JavaScript that provides
     cd weather-app
     ```
 
-3. Open `index.html` in your browser to run the application.
+3. Copy the `config.example.js` file to `config.js` in the `src` folder:
+    ```bash
+    cp src/config.example.js src/config.js
+    ```
+
+4. Open `src/config.js` and replace `"YOUR_API_KEY_HERE"` with your actual OpenWeatherMap API key. You can obtain your API key by signing up on the [OpenWeatherMap website](https://openweathermap.org/api).
+
+5. Open `index.html` in your browser to run the application.
 
 ## How It Works
 
@@ -40,13 +47,20 @@ A simple weather application built using HTML, CSS, and JavaScript that provides
 - **index.html**: The main HTML file that contains the structure of the app.
 - **style.css**: The CSS file that styles the app.
 - **script.js**: The JavaScript file that handles the weather fetching logic and event listeners.
+- **config.js**: The configuration file where your API key is stored (generated from `config.example.js`).
+- **config.example.js**: Example configuration file containing a placeholder for the API key (used to generate `config.js`).
 
 ## API
 
 The app uses the [OpenWeatherMap API](https://openweathermap.org/api) to fetch weather data. You will need to sign up on the OpenWeatherMap website to get an API key to use in the application.
 
-Replace the placeholder `YOUR API KEY HERE` in `script.js` with your actual API key.
+Add your API key to `src/config.js` as shown in the setup instructions.
 
 ## Example
 
 When a user types "New York" in the search box and clicks the search button or presses "Enter", the application will show the weather details for New York.
+
+## Note
+
+- **Security Reminder**: Keep your `config.js` file private and do not share it in public repositories.
+- **Git Ignore**: Ensure that your `config.js` file is included in `.gitignore` to prevent sensitive data from being uploaded to version control systems like GitHub.
